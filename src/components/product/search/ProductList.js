@@ -1,12 +1,15 @@
 import ProductListItem from "./ProductListItem";
+import "./ProductList.css";
 
 const ProductList = (props) => {
   return (
     <ul>
       {props.items.map((product) => (
         <ProductListItem key={product.id}>
-          <div>{product.name}</div>
-          <div>${product.price}</div>
+          <div className="item-info">
+            <div>{product.name}</div>
+            <div>${product.price}</div>
+          </div>
         </ProductListItem>
       ))}
     </ul>

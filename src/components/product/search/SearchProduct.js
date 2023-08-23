@@ -3,6 +3,7 @@ import Button from "../../UI/Button";
 import ProductList from "./ProductList";
 import ProductForm from "../ProductForm";
 import { insertProduct } from "../../../services/ProductServices";
+import "./SearchProduct.css";
 
 const SearchProduct = () => {
   const [showForm, setShowForm] = useState(false);
@@ -47,11 +48,16 @@ const SearchProduct = () => {
     } else {
       return (
         <div>
-          <div>
-            <Button onClick={onNewProductClickHandler}>Add Product</Button>
+          <div className="button-header">
+            <Button
+              buttonStyle={"new-button"}
+              onClick={onNewProductClickHandler}
+            >
+              Add Product
+            </Button>
           </div>
-          <div>SearchProduct</div>
-          <div>{showProductList()}</div>
+          <h2 className="text-center">List of Products</h2>
+          <div className="list">{showProductList()}</div>
         </div>
       );
     }

@@ -1,0 +1,11 @@
+.list {
+  display: inline-block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 90%;
+}
+
+.item-info {
+  justify-content: space-around;
+  display: flex;
+}

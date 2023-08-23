@@ -1,0 +1,39 @@
+.main-title {
+  width: 100%;
+  text-align: center;
+  padding: 0px;
+}
+
+.main-title h1 {
+  margin: 1rem auto;
+}
+
+.options-container {
+  max-width: 90%;
+  margin: 0 auto;
+  border-bottom: 0.1rem solid #e1e1e1;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  justify-items: center;
+}
+
+.options button:hover {
+  background-color: #037bc0;
+  color: #ffffff;
+  border-bottom-right-radius: 1rem;
+}
+
+.option-button {
+  width: 20rem;
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background-color: transparent;
+  border: 0.1rem solid #e1e1e1;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: bolder;
+}
