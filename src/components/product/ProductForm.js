@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./ProductForm.css";
 import Button from "../UI/Button";
 
 const ProductForm = (props) => {
@@ -8,7 +9,11 @@ const ProductForm = (props) => {
 
   const onSubmitProductForm = (event) => {
     event.preventDefault();
-    if (isValid && productName.trim().length > 0 && producPrice.trim().length > 0) {
+    if (
+      isValid &&
+      productName.trim().length > 0 &&
+      producPrice.trim().length > 0
+    ) {
       const newProduct = {
         name: productName,
         price: producPrice,
@@ -24,7 +29,7 @@ const ProductForm = (props) => {
     }
     setProductName(event.target.value);
   };
-  
+
   const priceInputChangeHandler = (event) => {
     if (producPrice.trim().length > 0) {
       setIsValid(true);
@@ -34,19 +39,19 @@ const ProductForm = (props) => {
 
   return (
     <form onSubmit={onSubmitProductForm}>
-      <div>
-        <label>Create Product</label>
-      </div>
-      <div>
-        <label>Name</label>
+      <h3 className="form-title">Create Product</h3>
+      <div className="form-control">
+        <label className="form-label">Name</label>
         <input type="text" onChange={nameInputChangeHandler} />
       </div>
-      <div>
-        <label>Price</label>
+      <div className="form-control">
+        <label className="form-label">Price</label>
         <input type="text" onChange={priceInputChangeHandler} />
       </div>
-      <Button type="submit">Add Product</Button>
-      <Button onClick={props.onCancelCreate}>Cancel</Button>
+      <div className="form-buttons">
+        <Button type="submit">Add Product</Button>
+        <Button onClick={props.onCancelCreate}>Cancel</Button>
+      </div>
     </form>
   );
 };

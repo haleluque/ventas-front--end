@@ -8,6 +8,10 @@
   margin: 1rem auto;
 }
 
+.main-title h3 {
+  margin: 0px;
+}
+
 .options-container {
   max-width: 90%;
   margin: 0 auto;
