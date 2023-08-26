@@ -63,7 +63,7 @@ const SearchProduct = () => {
     }
   };
 
-  return <div className="product-form">{showProductForm()}</div>;
+  return <div className="option-container">{showProductForm()}</div>;
 };
 
 export default SearchProduct;

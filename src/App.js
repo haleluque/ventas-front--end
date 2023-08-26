@@ -5,7 +5,7 @@ import SearchOrder from "./components/order/search/SearchOrder";
 import SearchProduct from "./components/product/search/SearchProduct";
 
 function App() {
-  const [selectedOption, setSelectedOption] = useState("product");
+  const [selectedOption, setSelectedOption] = useState("order");
 
   const showProductsPage = () =>
     selectedOption === "product" ? <SearchProduct /> : <SearchOrder />;
